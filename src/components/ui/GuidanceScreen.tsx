@@ -76,9 +76,9 @@ export const GuidanceScreen = ({
       </div>
       
       <div className="text-center mb-6 pt-4">
-        <h1 className="text-2xl font-bold text-gray-800 mb-2">{scenario.title}</h1>
+        <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">{scenario.title}</h1>
         <div className="flex items-center justify-center gap-4">
-          <button onClick={onStartOver} className="flex items-center gap-1 text-sm text-red-500 hover:text-red-600 underline transition-colors">
+          <button onClick={onStartOver} className="flex items-center gap-1 text-sm text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300 underline transition-colors">
             <RotateCcw className="w-4 h-4" />
             Start Over
           </button>
@@ -86,8 +86,8 @@ export const GuidanceScreen = ({
             onClick={onToggleAudio}
             className={`flex items-center gap-1 text-sm px-2 py-1 rounded transition-colors ${
               audioEnabled
-                ? 'bg-green-100 text-green-700 hover:bg-green-200'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800'
+                : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
             }`}
           >
             {audioEnabled ? <Volume2 className="w-3 h-3" /> : <VolumeX className="w-3 h-3" />}

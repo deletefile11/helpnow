@@ -12,44 +12,44 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="modal-overlay p-4">
-      <div className="bg-white rounded-xl shadow-2xl max-w-md w-full max-h-[80vh] overflow-y-auto">
+      <div className="bg-white dark:bg-gray-900 rounded-xl shadow-2xl max-w-md w-full max-h-[80vh] overflow-y-auto">
         <div className="p-6">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <Users className="w-6 h-6 text-blue-500" />
-              <h2 className="text-xl font-bold text-gray-800">About HelpNow AI</h2>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100">About HelpNow AI</h2>
             </div>
             <button
               onClick={onClose}
-              className="text-gray-500 hover:text-gray-700 transition-colors"
+              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
             >
               <X className="w-6 h-6" />
             </button>
           </div>
           
-          <div className="space-y-4 text-gray-700">
+          <div className="space-y-4 text-gray-700 dark:text-gray-300">
             <div className="text-center">
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Team CodeX</h3>
-              <p className="text-sm text-gray-600 mb-4">This project was developed by us</p>
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2">Team CodeX</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">This project was developed by us</p>
               
               <div className="space-y-2">
-                <div className="bg-gray-400 dark:bg-gray-500 rounded-lg p-3">
+                <div className="bg-gray-200 dark:bg-gray-700 rounded-lg p-3">
                   <p className="font-medium text-gray-800 dark:text-gray-100">Shiva Kumar S</p>
                 </div>
-                <div className="bg-gray-400 dark:bg-gray-500 rounded-lg p-3">
+                <div className="bg-gray-200 dark:bg-gray-700 rounded-lg p-3">
                   <p className="font-medium text-gray-800 dark:text-gray-100">Ruthvik MT</p>
                 </div>
-                <div className="bg-gray-400 dark:bg-gray-500 rounded-lg p-3">
+                <div className="bg-gray-200 dark:bg-gray-700 rounded-lg p-3">
                   <p className="font-medium text-gray-800 dark:text-gray-100">Pratham R Shetty</p>
                 </div>
-                <div className="bg-gray-400 dark:bg-gray-500 rounded-lg p-3">
+                <div className="bg-gray-200 dark:bg-gray-700 rounded-lg p-3">
                   <p className="font-medium text-gray-800 dark:text-gray-100">Sanjay UG</p>
                 </div>
               </div>
             </div>
             
             <div className="border-t pt-4 mt-6">
-              <p className="text-sm text-gray-600 text-center">
+              <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
                 HelpNow AI is designed to provide immediate first aid guidance in emergency situations.
               </p>
             </div>

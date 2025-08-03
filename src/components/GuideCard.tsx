@@ -100,17 +100,17 @@ export const GuideCard: React.FC<GuideCardProps> = ({
       
       {/* --- RESTORED: Visual Display Area --- */}
       {allImageUrls.length > 0 ? (
-        <div className="mb-4 bg-gray-50 rounded-lg overflow-hidden flex justify-center items-center min-h-[200px] relative border border-gray-200">
+        <div className="mb-4 bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden flex justify-center items-center min-h-[200px] relative border border-gray-200 dark:border-gray-700">
           
           {isLoading && (
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+            <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-              <span className="ml-2 text-gray-600">Loading image...</span>
+              <span className="ml-2 text-gray-600 dark:text-gray-300">Loading image...</span>
             </div>
           )}
           
           {imageError && (
-            <div className="flex flex-col items-center justify-center text-gray-500 p-8">
+            <div className="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 p-8">
               <ImageOff className="w-12 h-12 mb-2" />
               <p className="text-sm">Visual guide unavailable</p>
             </div>
@@ -153,7 +153,7 @@ export const GuideCard: React.FC<GuideCardProps> = ({
         <button
           onClick={onPreviousStep}
           disabled={isFirstStep}
-          className="w-1/3 bg-gray-700 hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 disabled:bg-gray-700 disabled:cursor-not-allowed"
+          className="w-1/3 bg-gray-700 hover:bg-gray-900 dark:bg-gray-600 dark:hover:bg-gray-500 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 disabled:bg-gray-700 dark:disabled:bg-gray-600 disabled:cursor-not-allowed"
         >
           <ArrowLeft className="w-5 h-5" />
           PREVIOUS
