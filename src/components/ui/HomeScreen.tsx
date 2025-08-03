@@ -52,9 +52,9 @@ export const HomeScreen = ({
       <div className="mb-8 text-center">
         <div className="flex items-center justify-center gap-2 mb-2">
           <Heart className="w-8 h-8 text-red-500" />
-          <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100">HelpNow AI</h1>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">HelpNow AI</h1>
         </div>
-        <p className="text-gray-600 dark:text-gray-300 font-medium">Your On-the-Spot Emergency Guide</p>
+        <p className="text-gray-700 dark:text-gray-200 font-medium">Your On-the-Spot Emergency Guide</p>
       </div>
 
       <div className="mb-8">
@@ -69,7 +69,7 @@ export const HomeScreen = ({
       </div>
 
       <div className="text-center mb-8 h-12">
-        <p className="text-lg text-gray-700 dark:text-gray-300 mb-2 max-w-md">
+        <p className="text-lg text-gray-800 dark:text-gray-200 mb-2 max-w-md">
           {appState === 'listening'
             ? 'Listening...'
             : appState === 'processing'
@@ -77,21 +77,21 @@ export const HomeScreen = ({
             : 'Tap to start the emergency guide'}
         </p>
         {appState === 'processing' && finalTranscript && (
-          <p className="text-sm text-gray-500 dark:text-gray-400 italic">"{finalTranscript}"</p>
+          <p className="text-sm text-gray-600 dark:text-gray-300 italic">"{finalTranscript}"</p>
         )}
       </div>
 
       {error && (
         <div className="absolute top-20 left-4 right-4 bg-red-100 dark:bg-red-900 border border-red-400 dark:border-red-600 text-red-700 dark:text-red-100 px-4 py-3 rounded max-w-md mx-auto" role="alert">
           <p className="text-sm">{error}</p>
-          <button onClick={onDismissError} className="text-xs underline mt-1 hover:no-underline text-red-600 dark:text-red-200">
+          <button onClick={onDismissError} className="text-xs underline mt-1 hover:no-underline text-red-700 dark:text-red-200">
             Dismiss
           </button>
         </div>
       )}
 
       <div className="absolute bottom-4 text-center">
-        <button onClick={onShowDisclaimer} className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 underline transition-colors">
+        <button onClick={onShowDisclaimer} className="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white underline transition-colors">
           Important Disclaimer
         </button>
       </div>

@@ -53,12 +53,12 @@ export const ThemeToggle = () => {
       {/* Trigger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center w-10 h-10 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+        className="flex items-center justify-center w-10 h-10 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm hover:shadow-md transition-all duration-200 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
         aria-expanded={isOpen}
         aria-haspopup="true"
         aria-label="Theme selector"
       >
-        <currentTheme.icon className="w-5 h-5 text-gray-700 dark:text-gray-200" />
+        <currentTheme.icon className="w-5 h-5 text-gray-800 dark:text-gray-200" />
       </button>
 
       {/* Dropdown Menu */}
@@ -68,10 +68,10 @@ export const ThemeToggle = () => {
             <button
               key={value}
               onClick={() => handleThemeSelect(value)}
-              className="w-full flex items-center gap-3 px-4 py-2.5 text-left text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700"
+              className="w-full flex items-center gap-3 px-4 py-2.5 text-left text-sm text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-150 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-700"
               role="menuitem"
             >
-              <Icon className="w-4 h-4 text-gray-700 dark:text-gray-200" />
+              <Icon className="w-4 h-4 text-gray-800 dark:text-gray-200" />
               <span className="flex-1">{label}</span>
               {theme === value && (
                 <Check className="w-4 h-4 text-blue-600" />
@@ -81,7 +81,7 @@ export const ThemeToggle = () => {
           
           {/* Current Theme Indicator */}
           <div className="border-t border-gray-200 dark:border-gray-700 mt-1 pt-1">
-            <div className="px-4 py-2 text-xs text-gray-600 dark:text-gray-300">
+            <div className="px-4 py-2 text-xs text-gray-700 dark:text-gray-300">
               Currently: {resolvedTheme === 'dark' ? 'Dark' : 'Light'}
               {theme === 'system' && ' (Auto)'}
             </div>

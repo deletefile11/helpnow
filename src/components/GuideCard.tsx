@@ -96,7 +96,7 @@ export const GuideCard: React.FC<GuideCardProps> = ({
   const currentImageSrc = allImageUrls[currentUrlIndex];
 
   return (
-    <div className={`bg-gray-800 rounded-xl shadow-lg p-4 sm:p-6 border-l-4 ${getCardBorder()} animate-fadeIn`}>
+    <div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-6 border-l-4 ${getCardBorder()} animate-fadeIn`}>
       
       {/* --- RESTORED: Visual Display Area --- */}
       {allImageUrls.length > 0 ? (
@@ -105,12 +105,12 @@ export const GuideCard: React.FC<GuideCardProps> = ({
           {isLoading && (
             <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-              <span className="ml-2 text-gray-600 dark:text-gray-300">Loading image...</span>
+              <span className="ml-2 text-gray-700 dark:text-gray-200">Loading image...</span>
             </div>
           )}
           
           {imageError && (
-            <div className="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 p-8">
+            <div className="flex flex-col items-center justify-center text-gray-600 dark:text-gray-300 p-8">
               <ImageOff className="w-12 h-12 mb-2" />
               <p className="text-sm">Visual guide unavailable</p>
             </div>
@@ -135,7 +135,7 @@ export const GuideCard: React.FC<GuideCardProps> = ({
         {getIcon()}
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-2">
-        <span className="text-sm font-semibold text-white">
+        <span className="text-sm font-semibold text-gray-900 dark:text-white">
           STEP {step} OF {totalSteps}
         </span>
         <div className="flex-1 bg-gray-200 dark:bg-gray-400 rounded-full h-2">
@@ -145,7 +145,7 @@ export const GuideCard: React.FC<GuideCardProps> = ({
           />
         </div>
           </div>
-          <p className="text-lg text-gray-100 dark:text-gray-200 leading-relaxed">{instruction}</p>
+          <p className="text-lg text-gray-800 dark:text-gray-100 leading-relaxed">{instruction}</p>
         </div>
       </div>
       
@@ -153,7 +153,7 @@ export const GuideCard: React.FC<GuideCardProps> = ({
         <button
           onClick={onPreviousStep}
           disabled={isFirstStep}
-          className="w-1/3 bg-gray-700 hover:bg-gray-900 dark:bg-gray-600 dark:hover:bg-gray-500 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 disabled:bg-gray-700 dark:disabled:bg-gray-600 disabled:cursor-not-allowed"
+          className="w-1/3 bg-gray-600 hover:bg-gray-700 dark:bg-gray-600 dark:hover:bg-gray-500 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed"
         >
           <ArrowLeft className="w-5 h-5" />
           PREVIOUS

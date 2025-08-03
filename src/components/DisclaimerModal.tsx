@@ -17,17 +17,17 @@ export const DisclaimerModal: React.FC<DisclaimerModalProps> = ({ isOpen, onClos
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <AlertTriangle className="w-6 h-6 text-yellow-500" />
-              <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100">Important Disclaimer</h2>
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white">Important Disclaimer</h2>
             </div>
             <button
               onClick={onClose}
-              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+              className="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors"
             >
               <X className="w-6 h-6" />
             </button>
           </div>
           
-          <div className="space-y-4 text-gray-700 dark:text-gray-300">
+          <div className="space-y-4 text-gray-800 dark:text-gray-200">
             <p className="font-semibold text-red-600">
               This app is for informational purposes only and is not a substitute for professional medical advice.
             </p>
@@ -44,14 +44,14 @@ export const DisclaimerModal: React.FC<DisclaimerModalProps> = ({ isOpen, onClos
               By using this app, you acknowledge that the developers are not responsible for any actions taken based on the information provided.
             </p>
             
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-sm text-gray-600 dark:text-gray-300">
               This app is designed to provide basic first aid guidance while you wait for professional help to arrive.
             </p>
           </div>
           
           <button
             onClick={onClose}
-            className="w-full mt-6 bg-gray-700 hover:bg-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200"
+            className="w-full mt-6 bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200"
           >
             I Understand
           </button>
